@@ -1,4 +1,3 @@
-FROM httpd:latest
-COPY index.html /usr/local/apache2/htdocs/index.html
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
 EXPOSE 80
-CMD [\"httpd\", \"-D\", \"FOREGROUND\"]"
